@@ -1,0 +1,310 @@
+/******************* Header ***************** */
+.header{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../../../public/images/header_image.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 10px 8%;
+    position: relative;
+  }
+  nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+  }
+  .logo{
+    width: 150px; height: auto;
+    cursor: pointer;
+  }
+  nav button{
+    border: 0;
+    outline: 0;
+    background: #db0001;
+    color: #fff;
+    padding: 7px 20px;
+    font-size: 12px;
+    border-radius: 4px;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  .language-btn{
+    display: inline-flex;
+    align-items: center;
+    background: transparent;
+    border: 1px solid #fff;
+    border-radius: 4px;
+  }
+  .language-btn img{
+    width: 10px; height: auto;
+    margin-left: 10px;
+  }
+  .header-content{
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    margin-top: 100px;
+    /* width: 100%; */
+  }
+  .header-content h1{
+    font-size: 60px;
+    line-height: 70px;
+    font-weight:800;
+    max-width: 650px;
+  }
+  .header-content h3{
+    font-weight: 400;
+    margin-bottom: 20px;
+  }
+  .email-signup{
+    background: #fff;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    overflow: hidden;
+  }
+  .email-signup input{
+    flex: 1;
+    border: 0;
+    outline: 0;
+    margin-left: 20px;
+  }
+  .email-signup button{
+    background:#db0001;
+    border: 0;
+    outline: 0;
+    color:#fff;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 16px 13px;
+  }
+  /************************ features *************** */
+  .features{
+    padding: 50px 12%;
+    font-size: 22px;
+  }
+  .row{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 15px 0;
+  }
+  .text-col, .img-col{
+    flex-basis: 50%;
+    margin-bottom: 20px;
+  }
+  .img-col img{
+    width: 90%; height: auto;
+    margin: auto;
+  }
+  .text-col h2{
+    font-size:40px;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+  .first, .features .img-col:nth-child(2 + 2n){
+    order: -1;
+  }
+  /* ****************** FAQ **************** */
+  .faq{
+    padding: 10px 12%;
+    text-align: center;
+    font-size: 18px;
+  }
+  .faq h4{
+    font-weight: 500;
+    font-size: 40px;
+  }
+  .accordion{
+    margin: 60px auto;
+    width: 100%;
+    max-width: 750px;
+  }
+  .faq-accordion >.accordion + .accordion{
+    margin-top: -50px;
+  }
+  .accordion-title{
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #303030;
+  }
+  
+  .accordion-title h3{
+    font-size: 24px;
+  }
+  .accordion-title span{
+    cursor: pointer;
+  }
+  
+  .accordion-content{
+    background: #1F1E1F;
+    padding: 10px 20px;
+    transition: display 0.5s;
+  }
+  .accordion-content p{
+    text-align: left;
+  }
+  .accordion-content, #close{
+    display: none;
+  }
+  
+  .accordion-content.active{
+    display: block;
+  }
+  
+  #open, #close{
+    transition: transform 0.5s;
+  }
+  #open.active{
+    display: none;
+  }
+  #close.active{
+    display: block;
+    transform: rotate(360deg);
+  }
+  .bottom-btn{
+    max-width: 650px;
+    margin-inline: auto;
+    text-align: center;
+    margin: 20px auto 60px;
+  }
+  
+  .bottom-btn button{
+    font-size: 24px;
+  }
+  .bottom-btn input{
+    outline-color: green;
+  }
+  /* ****************** footer **************** */
+  .footer{
+    padding: 15px 15% 10px;
+    border-top: 6px solid #333;
+    color: #777;
+  }
+  .footer h2{
+    font-size: 18px;
+    font-weight: 600;margin-bottom: 20px;
+  }
+  .row .col{
+    flex: 1;
+    margin-bottom: 20px;
+  }
+  .row .col a{
+    display: block;
+    color: #777;
+    font-size: 14px;margin-bottom: 10px;
+  }
+  .footer .row{
+    align-items: flex-start;
+    padding: 10px 0;
+  }
+  .footer .language-btn{
+    color:#fff;
+    padding: 10px 20px;
+    border-radius: 3px;
+  }
+  .copyright-text{
+    font-size: 14px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  
+  /************************ Media Query ******************/
+  @media screen and (max-width: 800px) {
+    .logo{
+      width: 100px;height: auto;
+    }
+    nav button{
+      padding: 5px 10px;
+    }
+    nav .language-btn{
+      padding: 4px 8px;
+    }
+    .header-content{
+      position: unset;
+      transform: none;
+      padding-top: 150px; 
+      
+    }
+    .header-content h1{
+      font-size: 30px;
+      line-height: 50px;
+    }
+    .header-content h3{
+      font-size: 18px;
+    }
+    .email-signup button{
+      font-size: 12px;
+      padding: 10px 15px;
+    }
+    .text-col, .img-col{
+      flex-basis: 100%;
+    }
+    .features{
+      padding-top: 100px;
+    }
+    .features h2{
+      font-size: 30px;
+    }
+    .features p{
+      font-size: 15px;
+    }
+    .row:nth-child(2 + 2n){
+      flex-direction: column-reverse;
+    }
+    .features .row{
+      padding: 10px 0;
+    }
+    .faq{
+      padding: 10px 6%;
+    }
+    .faq h2{
+      font-size: 20px;
+    }  
+    .accordion{
+      margin: 15px auto;
+     
+    }
+    .faq-accordion >.accordion + .accordion{
+      margin-top: -5px;
+    }
+    .accordion-title{
+      padding: 5px 10px;
+    }
+    .accordion-content p{
+      font-size: 14px;
+    }
+    .accordion-title h3{
+      font-size: 14px;
+      padding: 10px;
+    }
+    #open, #close{
+      font-size: 14px;
+    }
+    .bottom-btn{
+      font-size: 14px;
+      padding-inline: 20px;
+  
+    }
+    .footer{
+      text-align: center;
+    }
+    .footer .row{
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .footer .row > .col + .col{
+      border-bottom: 1px solid #ccc;
+      width: 100%;
+    }
+  }
